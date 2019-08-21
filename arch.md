@@ -285,8 +285,9 @@ sudo vim /etc/pacman.d/hooks/800-sign_kernel_for_secureboot.hook
 mkinitcpio -p linux
 ```
 
+The following content include arch-surface kernel and resume modifications.
 
-the following content include arch-surface kernel and resume modifications
+use `lsblk -f` and `blkid /dev/...`to confirm the correct PARTUUID and UUID.
 
 ```
 menuentry "Arch Linux Surface" {
