@@ -202,6 +202,8 @@ sudo systemctl enable sddm.service
 sudo pacman -S kde-gtk-config
 sudo pacman -S konsole dolphin dolphin-plugins 
 sudo pacman -S gwenview ksystemlog flameshot
+
+yay kdeconnect
 ```
 
 ## DE GNOME
@@ -373,6 +375,7 @@ yay node
 ```bash
 yay typora
 yay netease cloud music
+yay telegram
 ```
 
 ## fix shadowsocks problem
