@@ -402,3 +402,14 @@ sudo vim /etc/mkinitcpio.conf
 sudo vim /efi/EFI/BOOT/refind.conf
 # options "... +resume=UUID={swap_uuid}"
 ```
+
+## onedrive
+
+```bash
+yay onedrive
+echo 'Notes' > ~/.config/onedrive/sync_list
+echo 'Sync' >> ~/.config/onedrive/sync_list
+echo 'skip_dotfiles = "true"' > ~/.config/onedrive/config
+onedrive --synchronize --verbose --dry-run
+systemctl --user enable onedrive
+```
