@@ -413,3 +413,19 @@ echo 'skip_dotfiles = "true"' > ~/.config/onedrive/config
 onedrive --synchronize --verbose --dry-run
 systemctl --user enable onedrive
 ```
+
+## Steam
+
+```bash
+# I prefer to use flatpak rather than install the gone x86 multilib
+sudo pacman -S flatpak
+
+flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak --user install flathub com.valvesoftware.Steam
+flatpak run com.valvesoftware.Steam
+
+sudo flatpak override com.valvesoftware.Steam --filesystem=$HOME
+
+flatpak run --filesystems=~/.local/share/fonts --filesystem=~/.config/fontconfig  com.valvesoftware.Steam
+```
+
