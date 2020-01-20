@@ -43,7 +43,7 @@ mkdir -p /mnt/install
 mount -o noatime,autodefrag,subvol=@main /dev/sdd2 /mnt/install
 
 # install mininum
-pacstrap -c /mnt/install base base-devel btrfs-progs exfat-utils ntfs-3g zsh vim
+pacstrap -c /mnt/install base base-devel linux linux-firmware btrfs-progs exfat-utils ntfs-3g zsh vim zsh-autosuggestions zsh-syntax-highlighting
 ```
 
 ## fstab
