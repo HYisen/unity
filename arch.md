@@ -426,3 +426,11 @@ sudo flatpak override com.valvesoftware.Steam --filesystem=$HOME
 flatpak run --filesystems=~/.local/share/fonts --filesystem=~/.config/fontconfig  com.valvesoftware.Steam
 ```
 
+## BlueTooth
+
+```
+sudo systemctl enable bluetooth
+
+rfkill list # check if it's blocked
+rfkill unblock bluetooth
+```
