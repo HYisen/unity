@@ -240,19 +240,16 @@ sudo vim /etc/sddm.conf
 
 ```bash
 # use dmhacker's
-su
 git clone https://github.com/dmhacker/arch-linux-surface
 cd arch-linux-surface
+
 # modify *.sh by insert proxychain before every git if download speed is slow
-sudo sh setup.sh
-sh configure.sh 
-cd build-[VERSION]
-MAKEFLAGS="-j[NPROC]" makepkg -sc
-cd ..
-chown -R [USER] build-[VERSION]
-exit
+sh setup.sh
+sh configure_setup.sh 
 
 cd build-[VERSION]
+MAKEFLAGS="-j[NPROC]" makepkg -sc
+
 sudo pacman -U linux-surface-*
 ```
 
